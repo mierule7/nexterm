@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Cross-platform SSH/SFTP/Remote Desktop client",
   "main": "src/main/main.js",
+  "author": {
+  "name": "Amirul Hafiz",
+  "email": "mierule7@gmail.com"
+},
   "scripts": {
     "start": "electron .",
     "dev": "electron . --dev",
