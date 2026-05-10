@@ -30,10 +30,6 @@
   "directories": {
     "output": "dist"
   },
-  "linux": {
-    "target": ["AppImage", "deb"],
-    "category": "Utility"
-  },
   "win": {
     "target": "nsis"
   },
