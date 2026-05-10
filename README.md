@@ -7,20 +7,20 @@ Similar to MobaXterm but fully unlimited and open source.
 
 ## ✨ Features
 
-| Feature | Status |
-|---------|--------|
-| SSH Terminal | ✅ Full xterm.js terminal with 256 colors |
-| SFTP File Browser | ✅ Upload, download, rename, delete, mkdir |
-| SSH Tunneling (port forwarding) | ✅ Local port forwarding |
-| Session Manager | ✅ Groups, search, persistent storage |
-| Private Key Auth (.pem, .ppk, .key) | ✅ With passphrase support |
-| Password Auth | ✅ |
-| Key Vault | ✅ Store & reuse SSH keys |
-| Unlimited Sessions | ✅ No limits |
-| Unlimited Tunnels | ✅ No limits |
-| Tabbed Interface | ✅ Multiple sessions side-by-side |
-| Startup Commands | ✅ Auto-run on connect |
-| Cross-platform | ✅ Windows, macOS, Linux |
+| Feature                             | Status                                     |
+| ----------------------------------- | ------------------------------------------ |
+| SSH Terminal                        | ✅ Full xterm.js terminal with 256 colors  |
+| SFTP File Browser                   | ✅ Upload, download, rename, delete, mkdir |
+| SSH Tunneling (port forwarding)     | ✅ Local port forwarding                   |
+| Session Manager                     | ✅ Groups, search, persistent storage      |
+| Private Key Auth (.pem, .ppk, .key) | ✅ With passphrase support                 |
+| Password Auth                       | ✅                                         |
+| Key Vault                           | ✅ Store & reuse SSH keys                  |
+| Unlimited Sessions                  | ✅ No limits                               |
+| Unlimited Tunnels                   | ✅ No limits                               |
+| Tabbed Interface                    | ✅ Multiple sessions side-by-side          |
+| Startup Commands                    | ✅ Auto-run on connect                     |
+| Cross-platform                      | ✅ Windows, macOS, Linux                   |
 
 ---
 
@@ -34,21 +34,27 @@ Similar to MobaXterm but fully unlimited and open source.
 ### Install & Run
 
 **Windows:**
+
 ```
 Double-click start.bat
 ```
+
 Or:
+
 ```cmd
 npm install
 npm start
 ```
 
 **macOS / Linux:**
+
 ```bash
 chmod +x start.sh
 ./start.sh
 ```
+
 Or:
+
 ```bash
 npm install
 npm start
@@ -77,15 +83,16 @@ npm start
 ### SSH Tunneling
 
 1. Go to the **Tunnels** panel (sidebar)
-2. Click **+** 
+2. Click **+**
 3. Fill in your SSH jump server details
 4. Set **Local Port** (on your machine) and **Remote Port** (on the server)
 5. Click **Create & Start Tunnel**
 6. Connect your local app to `127.0.0.1:<local_port>`
 
 **Example: Tunnel to a remote PostgreSQL database:**
+
 - Local Port: `5433`
-- Remote Host: `localhost`  
+- Remote Host: `localhost`
 - Remote Port: `5432`
 - Then connect your DB client to `localhost:5433`
 
@@ -100,12 +107,12 @@ npm start
 
 ## ⌨️ Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+N` | New session |
-| `Ctrl+W` | Close active tab |
-| `Ctrl+Tab` | Next tab |
-| `Ctrl+Shift+Tab` | Previous tab |
+| Shortcut         | Action           |
+| ---------------- | ---------------- |
+| `Ctrl+N`         | New session      |
+| `Ctrl+W`         | Close active tab |
+| `Ctrl+Tab`       | Next tab         |
+| `Ctrl+Shift+Tab` | Previous tab     |
 
 ---
 
@@ -117,6 +124,7 @@ npm run build
 ```
 
 Output will be in the `dist/` folder:
+
 - Windows: `.exe` installer
 - macOS: `.dmg`
 - Linux: `.AppImage`
@@ -161,3 +169,4 @@ nexterm/
 ## 📝 License
 
 MIT License — free to use, modify, and distribute.
+Version 1.0
