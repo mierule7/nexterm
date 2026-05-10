@@ -6,7 +6,6 @@ pipeline {
     }
 
     triggers {
-        // Check GitHub every 5 minutes
         pollSCM('H/5 * * * *')
     }
 
@@ -28,15 +27,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building NexTerm...'
-                sh 'npx electron-builder --linux --publish never'
+                sh 'npx electron-builder --linux AppImage --publish never'
+            }
+        }
+
+        stage('Archive') {
+            steps {
+                echo 'Archiving build artifacts...'
+                archiveArtifacts artifacts: 'dist/*.AppImage', fingerprint: true
             }
         }
     }
 
     post {
         success {
-            echo '✅ Build successful!'
-            archiveArtifacts artifacts: 'dist/*.AppImage, dist/*.deb', fingerprint: true
+            echo '✅ Build successful! NexTerm AppImage is ready.'
         }
         failure {
             echo '❌ Build failed. Check Console Output for details.'
