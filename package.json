@@ -21,11 +21,20 @@
     "electron-builder": "^24.0.0"
   },
   "build": {
-    "appId": "com.nexterm.app",
-    "productName": "NexTerm",
-    "platforms": ["win", "mac", "linux"],
-    "directories": {
-      "output": "dist"
-    }
+  "appId": "com.nexterm.app",
+  "productName": "NexTerm",
+  "directories": {
+    "output": "dist"
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Utility"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
   }
+}
 }
