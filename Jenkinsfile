@@ -21,14 +21,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing npm packages...'
-                bat 'npm ci'
+                sh 'npm ci'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building NexTerm installer...'
-                bat 'npx electron-builder --win --publish never'
+                echo 'Building NexTerm...'
+                sh 'npx electron-builder --linux --publish never'
             }
         }
     }
@@ -36,7 +36,7 @@ pipeline {
     post {
         success {
             echo '✅ Build successful!'
-            archiveArtifacts artifacts: 'dist/*.exe', fingerprint: true
+            archiveArtifacts artifacts: 'dist/*.AppImage, dist/*.deb', fingerprint: true
         }
         failure {
             echo '❌ Build failed. Check Console Output for details.'
