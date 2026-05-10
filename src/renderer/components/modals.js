@@ -171,10 +171,15 @@ const Modals = (() => {
     if (!host) { Notify.show('Host is required', 'error'); return; }
     if (!user) { Notify.show('Username is required', 'error'); return; }
 
-    if (group === '__new__') {
-      group = prompt('New group name:') || 'Default';
-      Sessions.addGroup(group);
-    }
+    // if (group === '__new__') {
+    //   group = prompt('New group name:') || 'Default';
+    //   Sessions.addGroup(group);
+    // }
+
+if (group === '__new__') {
+  group = 'Default';
+}
+
 
     const sessionData = {
       name: name || host,
